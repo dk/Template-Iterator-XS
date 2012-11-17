@@ -11,7 +11,7 @@ extern "C" {
 }
 #endif
 
-#define STATUS_DONE 3
+static unsigned int STATUS_DONE ;
 
 // ------------------------------------------------------------------------
 //  get_next()
@@ -49,6 +49,12 @@ extern "C" {
 
 
 MODULE = Template::Iterator::XS           PACKAGE = Template::Iterator::XS
+
+void
+_init(status_done)
+    int status_done
+    PPCODE:
+      STATUS_DONE = status_done;
 
 void
 get_next(self)

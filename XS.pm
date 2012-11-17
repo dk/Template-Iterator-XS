@@ -5,11 +5,14 @@ use warnings;
 
 require DynaLoader;
 require Template::Iterator;
+require Template::Constants;
 
 our $VERSION = 0.01;
 our @ISA = qw( Template::Iterator DynaLoader );
 
 bootstrap Template::Iterator::XS $VERSION;
+
+_init( Template::Constants::STATUS_DONE() );
 
 1;
 
