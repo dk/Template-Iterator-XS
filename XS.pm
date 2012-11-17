@@ -28,7 +28,9 @@ configuration. The hope for this module is to function exacly in the same fashio
 
 =head1 USAGE
 
-XXX tbd
+use Template;
+use Template::Iterator::XS;
+$Template::Config::ITERATOR = 'Template::Iterator::XS';
 
 =head1 AUTHOR
 
@@ -39,6 +41,6 @@ Dmitry Karasik <dmitry@karasik.eu.org>
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-The work is sponsored by L<reg.ru> .
+The work is sponsored by reg.ru .
 
 =cut
